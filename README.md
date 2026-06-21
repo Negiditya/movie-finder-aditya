@@ -77,21 +77,22 @@ http://localhost:3000
 ## Project Structure
 
 ```txt
-movie-finder-aditya
+movie-finder-aditya/
 │
-├── app
-│   ├── favorites
+├── app/
+│   ├── favorites/
 │   │   └── page.js
 │   │
-│   ├── movie
-│   │   └── [id]
-│   │       ├── page.js
+│   ├── movie/
+│   │   └── [id]/
+│   │       └── page.js
 │   │
+│   ├── HomeContent.jsx
 │   ├── globals.css
 │   ├── layout.js
 │   └── page.js
 │
-├── components
+├── components/
 │   ├── BackButton.jsx
 │   ├── FavoriteButton.jsx
 │   ├── Footer.jsx
@@ -101,16 +102,19 @@ movie-finder-aditya
 │   ├── Pagination.jsx
 │   └── SearchBar.jsx
 │
-├── lib
-│   ├── tmdb.js
-│   └── favorites.js
+├── lib/
+│   ├── favorites.js
+│   └── tmdb.js
 │
-├── public
+├── public/
+│   └── (static assets, favicon, etc.)
 │
+├── .env.local
+├── .gitignore
 ├── AI_LOG.md
 ├── README.md
 ├── package.json
-└── .env.local
+
 ```
 
 ---
