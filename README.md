@@ -1,36 +1,186 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Movie Finder
+
+A modern Movie Discovery App built with Next.js and the TMDB API. Users can browse popular movies, search by title, view detailed information, and save their favorite movies with persistent local storage.
+
+---
+
+## Features
+
+- Browse popular movies from TMDB
+- Search movies by title
+- Movie details page with overview, rating, and release date
+- Add and remove favorite movies
+- Favorites persist using localStorage
+- Responsive design for desktop, tablet, and mobile
+- Loading states while fetching data
+- Error handling for failed API requests
+- Empty state when no movies are found
+- Manual pagination with Previous and Next buttons
+- Exactly 12 movies displayed per page
+- Footer marker as required by the assignment
+
+---
+
+## Tech Stack
+
+- Next.js
+- Tailwind CSS
+- TMDB API
+- Local Storage
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/movie-finder-aditya.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd movie-finder-aditya
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Create Environment Variables
+
+Create a file named `.env.local` in the root directory and add:
+
+```env
+NEXT_PUBLIC_TMDB_API_KEY=YOUR_TMDB_API_KEY
+```
+
+Replace `YOUR_TMDB_API_KEY` with your TMDB API key.
+
+### 5. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```txt
+movie-finder-aditya
+│
+├── app
+│   ├── favorites
+│   │   └── page.js
+│   │
+│   ├── movie
+│   │   └── [id]
+│   │       ├── page.js
+│   │
+│   ├── globals.css
+│   ├── layout.js
+│   └── page.js
+│
+├── components
+│   ├── BackButton.jsx
+│   ├── FavoriteButton.jsx
+│   ├── Footer.jsx
+│   ├── MovieCard.jsx
+│   ├── MovieGrid.jsx
+│   ├── Navbar.jsx
+│   ├── Pagination.jsx
+│   └── SearchBar.jsx
+│
+├── lib
+│   ├── tmdb.js
+│   └── favorites.js
+│
+├── public
+│
+├── AI_LOG.md
+├── README.md
+├── package.json
+└── .env.local
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## API Used
 
-## Deploy on Vercel
+This project uses The Movie Database (TMDB) API.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+TMDB Website:
+https://www.themoviedb.org/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+API Documentation:
+https://developer.themoviedb.org/docs
+
+---
+
+## Assignment Requirements Completed
+
+### Browse Movies
+
+Displays popular movies in a responsive grid layout.
+
+### Search Movies
+
+Users can search movies by title and results update dynamically.
+
+### Movie Details
+
+Clicking a movie opens a detailed page containing:
+
+- Poster
+- Title
+- Rating
+- Release Date
+- Overview
+
+### Favorites
+
+Users can:
+
+- Add movies to favorites
+- Remove movies from favorites
+- Persist favorites after page reload using localStorage
+
+### Pagination
+
+- Manual Previous / Next buttons
+- Exactly 12 movies per page
+- No infinite scrolling
+
+### States
+
+- Loading state while fetching data
+- Error state for failed requests
+- Empty state when no movies are found
+
+### Responsive Design
+
+Optimized for:
+
+- Mobile
+- Tablet
+- Desktop
+
+---
+
+## Footer Marker
+
+As required by the assignment, the homepage footer contains:
+
+Built for Jeevan — Adiya Negi
+
+---
